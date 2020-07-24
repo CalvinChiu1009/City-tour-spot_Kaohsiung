@@ -1,0 +1,269 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* General settings */
+.wrap{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.clearfix{
+    clear: both;
+}
+
+.orange-color{
+    color: #FFBB00;
+}
+
+.title-color{ 
+    color: white;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.font-family{
+    font-family: 微軟正黑體;
+}
+
+/* 背景色 */
+
+.bg-purple{
+    background: #8A82CC;
+}
+
+.bg-orange{
+    background: #FFA782;
+}
+
+.bg-yellow{
+    background: #F5D105;
+}
+
+.bg-blue{
+    background: #559AC8;
+}
+/* General settings end */
+
+/* 頁首選單區 */
+#top{
+    text-align: center;
+    font-size: 50px;
+    padding-top: 100px;
+}
+.header{
+    background-image: url(https://imgur.com/B9sSu5B.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 380px;
+    background-size: cover;
+    z-index: -1;
+    text-align: center;
+}
+.district{
+    margin-top: 50px;
+    width: 450px;
+    height: 50px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 5px solid white;
+    border-radius: 10px;  /* 不知為何沒有作用 */
+    background-color: rgba(255, 255, 255, 0.7);
+}
+/* 頁首選單區 */
+
+/* 四大熱門景點區 */
+h2{
+    margin: 20px auto;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+/* 整份html都有左邊往內收縮時內容跟著移動，右邊收縮時卻無法移動的問題 */
+.topDist{
+    /* position: absolute;
+    top: 325px;
+    left: 325px; */
+    margin: -55px auto;
+    width: 800px;
+    height: 110px;
+    background: white;
+    box-shadow: 1px 1px #dddddd;
+    border: 2px solid white;
+    border-radius: 10px;
+    z-index: 1;
+}
+.topDist .btn{
+    width: 140px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 45px;
+    outline: none; /* 取消按鈕點擊後的籃框 */
+}
+.topDist .btn:hover{
+    font-weight: bold;
+}
+.topDist .btn:active{
+    box-shadow: 0px 0px 5px #559AC8;
+}
+/* 四大熱門景點區 */
+
+/* Separator */
+.separator{
+    margin: 0 auto;
+    padding-top: 80px;
+    width: 1024px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.separator::before{
+    content: "";
+    width: 490px;
+    margin-right: 10px;
+    border-top: 1px dashed #559ACB;
+}
+.icon-down{
+    width: 24px;
+    height: 24px;
+    padding-left: 2px;
+    padding-top: 2px;
+    border-radius: 24px;
+    background-repeat: no-repeat;
+    border: 2px solid #559ACB;
+    box-sizing: border-box;
+}
+.separator::after{
+    content: "";
+    width: 490px;
+    margin-left: 10px;
+    border-top: 1px dashed #559ACB;
+}
+/* Separator */
+
+/* 各地區景點資訊 */
+.content{
+    background: white;
+    height: auto;
+    margin: 30px auto;
+}
+.content .list{
+    margin-left: 236px;
+}
+.content>ul>li{
+    display: block;
+    width: 464px;
+    height: 280px;
+    float: left;
+    box-shadow: 1px 1px #DDDDDD;
+    background: white;
+    margin: 10px;
+}
+.content .showName{
+    text-align: center;
+    font-size: 30px;
+    color: grey;
+}
+.content .area{
+    width: 100%;
+    z-index: 2;
+}
+.content ul li img{
+    width: 464px;
+    height: 150px;
+}
+.content .area h4{
+    margin-left: 10px;
+    margin-top: -30px;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 微軟正黑體;
+    text-shadow: 0.5px 0.5px black;
+    color: white;
+}
+.content .icon{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.content .ticket-info{
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 10px;
+    font-size: 12px;
+}
+.content .area ul li{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-family: 微軟正黑體;
+    text-indent: -10px; /* 首行縮排或突出 */
+    font-size: 12px;
+}
+.goTop{
+    position: fixed;
+    right: 50px;
+    bottom: 150px;
+}
+/* 各地區景點資訊 */
+
+/* footer section */
+.footer{
+    background-color: #00AAAA;
+    height: 90px;
+    padding: 30px;
+}
+.footer p{
+    margin-top: 20px;
+}
+/* footer section */
